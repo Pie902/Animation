@@ -1,0 +1,53 @@
+    p
+    {
+      color: azure;
+      font-size: 200%;
+      font-style: italic;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+    }
+
+    a
+    {
+      color: azure;
+      font-size: 150%;
+      font-style: italic;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+    }
+
+    body
+    {
+      height: 100vh;
+      background: rgb(2,0,36);
+      background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(7,7,60,1) 21%, rgba(0,60,73,1) 100%);
+    }
+
+    img
+    {
+      position: absolute;
+      display: inline-block;
+    }
+
+    #video
+    {
+      display: block;
+      margin: auto;
+      width: 960px;
+      height: 540px;
+
+      -webkit-box-shadow: 5px 5px 17px 5px rgba(0,0,0,0.56); 
+      box-shadow: 5px 5px 17px 5px rgba(0,0,0,0.56);
+    }
+
+    #Home
+    {
+      display: block;
+      margin: auto;
+      width: 960px;
+      height: auto;
+      padding: 15px;
+
+      -webkit-box-shadow: 5px 5px 17px 5px rgba(0,0,0,0.56); 
+      box-shadow: 5px 5px 17px 5px rgba(0,0,0,0.56);
+    }

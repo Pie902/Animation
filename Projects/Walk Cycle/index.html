@@ -7,37 +7,38 @@
 
 <body onclick = "Go()">
 
-  <audio preload autoplay="auto" loop muted id="WalkHard"><source src="sound/WalkHard.ogg" type="audio/ogg"></audio>
+  <audio preload autoplay="auto" loop id="WalkHard"><source src="sound/WalkHard.ogg" type="audio/ogg"></audio>
 
   <p>
     Walk Cycle
   </p>
+  <img src='mute.png' onclick="Go()" id="mute"/>
 
   <div id="container">
     <div id="aanimatedimage">
-      <img src='f/01.png' onclick="Go()"/>
-      <img src='f/02.png' onclick="Go()"/>
-      <img src='f/03.png' onclick="Go()"/>
-      <img src='f/04.png' onclick="Go()"/>
-      <img src='f/05.png' onclick="Go()"/>
-      <img src='f/06.png' onclick="Go()"/>
-      <img src='f/07.png' onclick="Go()"/>
-      <img src='f/08.png' onclick="Go()"/>
-      <img src='f/09.png' onclick="Go()"/>
-      <img src='f/10.png' onclick="Go()"/>
-      <img src='f/11.png' onclick="Go()"/>
-      <img src='f/12.png' onclick="Go()"/>
-      <img src='f/13.png' onclick="Go()"/>
-      <img src='f/14.png' onclick="Go()"/>
-      <img src='f/15.png' onclick="Go()"/>
-      <img src='f/16.png' onclick="Go()"/>
-      <img src='f/17.png' onclick="Go()"/>
-      <img src='f/18.png' onclick="Go()"/>
-      <img src='f/19.png' onclick="Go()"/>
-      <img src='f/20.png' onclick="Go()"/>
-      <img src='f/21.png' onclick="Go()"/>
-      <img src='f/22.png' onclick="Go()"/>
-      <img src='f/23.png' onclick="Go()"/>
+      <img src='f/01.png'/>
+      <img src='f/02.png'/>
+      <img src='f/03.png'/>
+      <img src='f/04.png'/>
+      <img src='f/05.png'/>
+      <img src='f/06.png'/>
+      <img src='f/07.png'/>
+      <img src='f/08.png'/>
+      <img src='f/09.png'/>
+      <img src='f/10.png'/>
+      <img src='f/11.png'/>
+      <img src='f/12.png'/>
+      <img src='f/13.png'/>
+      <img src='f/14.png'/>
+      <img src='f/15.png'/>
+      <img src='f/16.png'/>
+      <img src='f/17.png'/>
+      <img src='f/18.png'/>
+      <img src='f/19.png'/>
+      <img src='f/20.png'/>
+      <img src='f/21.png'/>
+      <img src='f/22.png'/>
+      <img src='f/23.png'/>
     </div>
   </div>
 
@@ -93,11 +94,12 @@
     var go = false;
     var imagesMax = imageList.length;
     var pos = -250;
+    unmuteAudio();
 
     for (let x = 0; x < imagesMax; x++) {imageList[x].style.visibility = "hidden"; console.log(x);}
 
     resetAudio();
-    setInterval(playing, 1/20*1000)
+    setInterval(playing, 1/24*1000)
     //Math is fun :)
 
     function playing()
@@ -125,9 +127,15 @@
       }
     }
 
+    function Go()
+    {
+      document.getElementById("mute").remove();
+    }
+
     function resetAudio()
     {
       document.getElementById("WalkHard").currentTime = 0;
+      document.getElementById("WalkHard").playing = true;
     }
 
     function muteAudio()

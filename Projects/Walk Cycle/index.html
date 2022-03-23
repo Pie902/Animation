@@ -115,9 +115,7 @@
         imageList[imageCurrent+1].style.visibility = "visible";
       }
 
-      console.log(pos);
-
-      if(pos >= window.screen.width)
+      if(pos >= window.innerWidth)
       {
         pos = -250;
         document.getElementById("aanimatedimage").style.marginLeft = -250 + "px";
